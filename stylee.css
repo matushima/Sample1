@@ -1,0 +1,25 @@
+/*メイン*/
+
+body{
+font-family:cursive;
+color:white;
+background-image:url(haikei.png);
+background-repeat:repeat;
+}
+
+.in {
+position:relative; width:840px; height:270px;
+}
+
+.in img {
+position:absolute; left:25%; top:0;
+}
+
+ul{
+list-style:none;
+}
+
+li{
+display: inline;
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="stylee.css" type="test/css">
+		<script type="text/javascript" src="jquery.js"></script>
+			<title>東京地下の水族館</title>
+		<div align ="center">
+			<img src="ヘッダー.png">
+		</div>
+</head>
+<body>
+
+
+<!--スライドショーここから-->
+<p>
+<div class="in">
+		<img src="くらげ.png">
+		<img src="カニ.png">
+		<img src="クマノミ.png">
+		<img src="ペンギン.png">
+</div>
+</p>
+<!--ここまで-->
+	<div align="center">
+		<img src="fish.png">
+	</div>
+	
+	<!--ボタンここから-->
+	<div align="center">
+		<ul id="button1">
+			<li><a href="#"><img src="水族館展示.png" width="130px" height="130px" style="margin:20px 20px;"></a></li>
+			<li><a href="#"><img src="営業案内.png" width="130px" height="130px" style="margin:20px 20px;"></a></li>
+			<li><a href="#"><img src="研究活動.png" width="130px" height="130px" style="margin:20px 20px"></a></li>
+			<li><a href="#"><img src="イベント情報.png" width="130px" height="130px" style="margin:20px 20px;"></a></li>
+		</ul>
+	</div>
+	<!--ここまで-->
+	
+	<div align="center">
+		<img src="フッター.png">
+	</div>
+</body>
+<footer>
+
+	<!--ボタンのアニメーションスクリプト-->	
+	<script>
+		$(function() {
+    $('#button1 li img')
+    .hover(
+        function(){
+            $(this).stop().animate({
+                'width':'170px',
+                'height':'170px',
+                'marginTop':'-32px'
+            },'fast');
+        },
+        function () {
+            $(this).stop().animate({
+                'width':'130px',
+                'height':'130px',
+                'marginTop':'0px'
+            },'fast');
+        }
+    );
+});
+	</script>
+	<!--ここまで-->
+	
+	<!--スライドショーここから-->
+	<script>
+	//最初の画像以外を非表示にする
+$('.in img:gt(0)').hide();
+//タイマー
+setInterval(function() {
+     //フェードインとアウトを繰り返す
+    $('.in :first-child').fadeOut().next('img').fadeIn().end().appendTo('.in');
+}, 4500);
+	</script>
+	<!--ここまで-->
+	
+</footer>
+</html>
